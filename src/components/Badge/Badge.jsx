@@ -1,15 +1,22 @@
 import React from "react";
 import "./Badge.css";
 
-const Badge = ({ isFavorite, onToggleFavorite }) => {
-    return (
-        <div className="badge-container">
-            <span className="badge badge-primary">{isFavorite ? "Favorite" : "Not Favorite"}</span>
-            <button className="btn btn-sm btn-outline-primary" onClick={onToggleFavorite}>
-                {isFavorite ? "Remove from Favorites" : "Add to Favorites"}
-            </button>
-        </div>
-    );
+const Badge = ({ isFavorite, handleFavorite }) => {
+  return (
+    <div className="container position-static end-0">
+      <span className="z-3">
+        
+      <button className="btn btn-lg" onClick={handleFavorite}>
+          {isFavorite ? (
+            <i className="fa-solid fa-heart fa-2x"></i>
+          ) : (
+            <i className="fa-solid fa-heart fa-2x"></i>
+          )}
+        </button>
+        </span>
+
+    </div>
+  );
 };
 
 export default Badge;

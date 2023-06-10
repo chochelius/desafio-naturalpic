@@ -11,7 +11,7 @@ const Home = () => {
                     />
 
                 </div>
-                <div className="col-sm-6 align-content-center p-5">
+                <div className="col-sm-6 align-content-center mt-5 p-5">
 
                     <p className="fs-4 text-white">Bienvenido a la galería de imagenes. <br /> Aquí podrás ver muchos <p className="text-"> paisajes </p>Ninguno de estos paisajes es real Fueron hechos con inteligencia artificial generativa Espero que te gusten</p>
                 </div>

@@ -1,32 +1,36 @@
-import React from "react";
-import { useFavorites } from "../Context/FavoritesContex";
+import React, { useContext } from "react";
+import { FavoritesContext } from "../Context/FavoritesContex";
 import Main from "../components/Main/Main";
 
-// const Favorites = () => {
-//   const { favorites } = useFavorites();
-//   const filteredFavorites = favorites ? favorites.filter(Boolean) : [];
-
-//   return <Main images={filteredFavorites} favorites={favorites} />;
-// };
-
-// export default Favorites;
-// if there's no favoritos, show a message that say "aún no tienes favoritos, agrega alguno a esta sección with a link to the gallery page"
-
 const Favorites = () => {
-    const { favorites } = useFavorites();
-    const filteredFavorites = favorites ? favorites.filter(Boolean) : [];
-    return (
-        <div>
-        {filteredFavorites.length === 0 ? (
-            <div>
-            <h1>Aún no tienes favoritos</h1>
-            <p>Agrega alguno a esta sección</p>
+  const { favorites, removeFavorite, isFavorite } = useContext(FavoritesContext);
+
+  const handleFavorite = (image) => {
+    if (isFavorite(image)) {
+      removeFavorite(image);
+    }
+  };
+
+  return (
+      // if there's no favorites, show a message
+      // otherwise, show the images
+    //   <Main images={favorites} handleFavorite={handleFavorite} isFavorite={isFavorite} />
+      
+        <div className="home w-100">
+            <div className="container pt-5">
+                
+            {favorites.length === 0 ? (
+                    <div className="row">
+                        <div className="col-12 col-md-6 col-lg-4 container-fluid mt-5 ">
+                            <p className="text-center text-white">You don't have any favorites yet.</p>
+                        </div>
+                    </div>
+                ) : (
+                    <Main images={favorites} handleFavorite={handleFavorite} isFavorite={isFavorite} />
+                )}
             </div>
-        ) : (
-            <Main images={filteredFavorites} favorites={favorites} />
-        )}
         </div>
     );
-    }
+};
 
 export default Favorites;

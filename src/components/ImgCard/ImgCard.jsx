@@ -2,14 +2,13 @@ import React from "react";
 import "./ImgCard.css";
 import Badge from "../Badge/Badge";
 
-const ImgCard = ({ id, path, description, name, isFavorite, onToggleFavorite }) => {
+const ImgCard = ({ id, path, description, name, isFavorite, handleFavorite }) => {
     return (
         <div className="card mt-4">
-            <Badge isFavorite={isFavorite} onToggleFavorite={onToggleFavorite} />
-            <img src={path} className="card-img-top" alt={name} />
+            <Badge isFavorite={isFavorite} handleFavorite={handleFavorite} />
+            <img src={path} className="card-img-top z-0 position-relative" alt={name} />
             <div className="card-body">
-                <h5 className="card-title">{name}</h5>
-                <p className="card-text">{description}</p>
+                <p className="card-text font-monospace">El prompt que se utilizó para crear esta imagen fué: {description}</p>
             </div>
         </div>
     );

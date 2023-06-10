@@ -3,8 +3,6 @@ import { FavoritesContext } from "../Context/FavoritesContex";
 import { images } from "../Api/Api";
 import Main from "../components/Main/Main";
 
-
-
 const Gallery = () => {
   const [allImages, setAllImages] = useState([]);
   const { addFavorite, removeFavorite, isFavorite } = useContext(FavoritesContext);
@@ -21,29 +19,9 @@ const Gallery = () => {
     }
   };
 
-  const favorites = useContext(FavoritesContext);
-
-  const onToggleFavorite = () => {
-    if (isFavorite) {
-        removeFavorite();
-    } else {
-        addFavorite();
-    }
-};
-
-
-//     return (
-//         <Main images={allImages} favorites={} handleFavorite={handleFavorite} />
-//       );
-      
-// };
-
-// export default Gallery;
-
-return (
-    <Main images={allImages} favorites={favorites} handleFavorite={handleFavorite} onToggleFavorite={onToggleFavorite} />
-    );
-    
+  return (
+    <Main images={allImages} handleFavorite={handleFavorite} isFavorite={isFavorite} />
+  );
 };
 
 export default Gallery;
