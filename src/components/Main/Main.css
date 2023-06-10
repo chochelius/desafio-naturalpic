@@ -1,0 +1,15 @@
+body {  
+    /* gradient colors
+    --brunswick-green: #254C44ff;
+--rich-black: #081F2Fff;
+--verdigris: #59A7AAff;
+--feldgrau: #3D5544ff;
+--gunmetal: #183034ff;
+ */
+    background: linear-gradient(90deg, #254C44ff 0%, #081F2Fff 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: scroll;
+    /* border: 1px solid red; */
+
+}
