@@ -22,7 +22,7 @@ const Favorites = () => {
             {favorites.length === 0 ? (
                     <div className="row">
                         <div className="col-12 col-md-6 col-lg-4 container-fluid mt-5 ">
-                            <p className="text-center text-white">You don't have any favorites yet.</p>
+                            <p className="text-center text-white">No tienes ningún favorito en tu galería, agrega algunos para comenzar</p>
                         </div>
                     </div>
                 ) : (

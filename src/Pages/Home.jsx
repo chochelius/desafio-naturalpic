@@ -13,7 +13,7 @@ const Home = () => {
                 </div>
                 <div className="col-sm-6 align-content-center mt-5 p-5">
 
-                    <p className="fs-4 text-white">Bienvenido a la galería de imagenes. <br /> Aquí podrás ver muchos <p className="text-"> paisajes </p>Ninguno de estos paisajes es real Fueron hechos con inteligencia artificial generativa Espero que te gusten</p>
+                    <p className="fs-4 text-white">Bienvenido a la galería de imagenes. <br /> Aquí podrás ver muchos  paisajes </p> <br /> <p className=" fs-4 text-white text-decoration-underline">  Ninguno de estos paisajes es real </p> <br /> <p className=" font-monospace text-white"> Fueron hechos con inteligencia artificial generativa </p> <br /> <p className="text-white fs-4"> Espero que te gusten</p>
                 </div>
             </div>
         </div>
