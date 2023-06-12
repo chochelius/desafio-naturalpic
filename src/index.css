@@ -12,15 +12,17 @@ body {
 .home {
     background-color: #282c34;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     font-size: calc(10px + 2vmin);
+    height: 120vh;
 
   }
 
 .footer {
+  margin-top: 5%;
   background-color: #282c34;
   align-items: center;
   justify-content: space-between;
   font-size: calc(10px + 2vmin);
-  max-height: 30vh;
+  height: 15%;
 }
